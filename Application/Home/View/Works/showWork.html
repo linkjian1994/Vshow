@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vshow-秀出自我</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Vshow学生发布平台,提供学生的作品发布">
+    <meta name="keywords" content="Vshow,致力于发展为高校的学生作品发布平台">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Index/reset.css"> 
+    <!-- <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Index/comment.css"> -->
+</head>
+<body>
+    <style type="text/css">
+
+  .top-box {position:fixed; top:0px; left: 0px; width: 100%; height: 44px; line-height: 44px; z-index:100000; box-shadow: 0px 3px 6px #333333; background: #138BBD;}
+  .top-box .project-name {float: left; padding-left: 40px; color: #FFFFFF; font-weight: bold;}
+  .top-box .view-big {float: right; margin-right: 60px;}
+  .top-box .view-big a {color: #f2f2f2; font-size: 14px; font-weight: bold;}
+  .top-box .view-big a:hover {text-decoration: underline;}
+
+  #iframe-wrap {
+  height: 100%;
+  overflow: visible;
+  position: relative;
+  top: 50px;
+  z-index: 50;
+}
+#iframe {
+  margin-top: 0;
+}
+    </style>
+    <div class="top-box">
+  <strong class="project-name">{$worksInfo.works_name}</strong> <div class="bdsharebuttonbox" style="margin-top:8px;margin-left:20px;float:left;"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script><span class="view-big"><a href="__ROOT__/Uploads/Works/{$worksInfo.works_path}">全屏</a></span>
+</div>
+        <div id="iframe-wrap">
+                <iframe id="iframe" src="__ROOT__/Uploads/Works/{$worksInfo.works_path}" frameborder="0" width="100%" height="570px"></iframe>
+        </div>
+          
+
+</body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>{$user.truename}个人中心</title>
+<link rel="stylesheet" href="__PUBLIC__/script/Plug/bootstrap/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="__PUBLIC__/script/Plug/bootstrap/css/bootstrap-theme.min.css">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="__PUBLIC__/script/Common/jquery-1.10.2.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="__PUBLIC__/script/Plug/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body> 
+<include file="Course:s_head" />
+<center><h4>{$homeworkInfo.homework_name}</h4></center>
+<center><h5>发布人：{$homeworkInfo.teacher_name} 截止时间：{$homeworkInfo.homework_expires|date="Y-m-d",###}</h5></center>
+<center><h4>{$homeworkInfo.homework_about}</h4></center>
+		
+
+</div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/sea.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/Common/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/dialog-min.js"></script>
+
+</body>
+</html>

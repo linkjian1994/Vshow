@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>课程公告</title>
+	<link rel="stylesheet" href="__PUBLIC__/script/Plug/bootstrap/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="__PUBLIC__/script/Plug/bootstrap/css/bootstrap-theme.min.css">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="__PUBLIC__/script/Common/jquery-1.10.2.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="__PUBLIC__/script/Plug/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/sea.js"></script>
+
+<script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/dialog-min.js"></script>
+</head>
+<body>
+
+	<include file="Course:head" />
+	   <table class="table table-condensed">
+        <volist name="noticeList" id="no">
+            <tr>
+                <td><a href="__CONTROLLER__/showNotice/courseId/{$Think.get.courseId}/noticeId/{$no.id}">{$no.title}</a></td>
+                <td>{$no.pub_time|date="Y-m-d",###}</td>
+            </tr>
+            <tr>
+            	{$page}
+            </tr>
+        </volist>
+    </table>
+</body>
+</html>

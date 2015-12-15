@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vshow-秀出自我</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Vshow学生发布平台,提供学生的作品发布">
+    <meta name="keywords" content="Vshow,致力于发展为高校的学生作品发布平台">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Index/reset.css"> 
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Plug/Validation-Engine/validationEngine.jquery.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/script/Plug/artDialog/css/ui-dialog.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/StudentCenter/ucenter.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/StudentCenter/dropkick.css">
+</head>
+<body>
+    <div class="column-box2 r-content" style="display:block;">
+        <form id="worksUpload">
+        <ul>
+            <li class="wrap">
+                <strong>作业名称：</strong>
+                <input type="text" name="works-name"  id="works-name"  class="validate[required,maxSize[24]] text">
+            </li>
+            <li class="wrap">
+                <strong>作业简介：</strong>
+                <textarea name="works-about" id="works-about" class="validate[maxSize[200]] textarea" cols="67" rows="6"></textarea>
+            </li>
+       <!--      <li class="wrap clearfix">
+                          <strong class="fl">作业类型：</strong>
+                          <select class="default">
+                              <option value="ss">罗剑高1罗剑高1</option>
+                              <option value="AU">罗剑高2罗剑高2</option>
+                              <option value="CA">罗剑高3罗剑高3</option>
+                          </select>
+                      </li>
+                      <li class="wrap clearfix">
+                          <strong>是否共享：</strong>
+                          <div class="share fl" id="share">
+                              <span class="yes">是</span> 
+                              <span class="no">否</span> 
+                              <em class="shareMove"></em> 
+                          </div>
+                      </li> -->               
+            <li class="wrap section1 clearfix" >
+                <div class="section-l fl">
+                    <a href="javascript:;" class="btn-green" style="position: absolute;">选择作业 <input type="file" name="works-file" id="works-file" class="validate[required] file-btn" accept=".zip" /></a>     
+                </div>
+                <div class="fl filename" id="works-filename">
+                </div>
+                <div class="section-r fl">
+                    <p>作业上传说明：</p>
+                    <p>1.请将你的作品压缩成zip后再上传&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                </div>
+
+            </li>
+            <li class="wrap section2 clearfix">
+                <div class="section-l fl">
+                   <a href="javascript:;" class="btn-green" style="position: absolute;" >选择截图 <input type="file" name="works-images" id="works-images"  class="validate[required] file-btn" accept=".jpg,.png,.jpeg,.bmp,.gif"/></a>        
+                </div>
+                <div class="fl filename" id="works-imgname">
+                </div>
+                <div class="section-r fl">
+                    <p>截图上传说明:</p>
+                    <p>1.请上传一张作品截图,大小不超过1M</p>
+                    <p>2.允许的格式:jpg,png,jpeg,bmp,gif</p>
+                </div>
+            </li>
+            <input type="hidden" value="{$homeworkID}" name="homeworkID" id="homeworkID">
+            <li class="wrap section2 clearfix"><input type="submit" value="发布作品" class="btn-green" style="margin-left:300px;margin-top:20px;"></li>
+        </ul>
+        </form>
+  </div>
+</body>
+<script type="text/javascript">
+  var root = "__ROOT__";
+</script>
+ <script type="text/javascript" src="__PUBLIC__/script/Index/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/StudentCenter/jquery.dropkick-min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine-zh_CN.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/dialog-min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/StudentCenter/submitHomework.js"></script>
+</html>

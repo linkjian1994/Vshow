@@ -1,0 +1,902 @@
+[ 2015-10-30T21:37:24+08:00 ] ::1 /vshow/index.php/Home/Works/showWork/path/56336fc1e04fc.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0050s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+
+[ 2015-10-30T21:39:02+08:00 ] ::1 /vshow/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`works_name`,`works_image` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 LIMIT 0,5   [ RunTime:0.0000s ]
+SQL: SELECT vs_works.id,`works_author`,`click_counts`,`works_name` FROM `vs_works` INNER JOIN vs_works_counts as c on c.works_id = vs_works.id  WHERE `is_delete` = 0 ORDER BY click_counts desc LIMIT 0,9   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`works_author`,`works_name` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 ORDER BY works_pubtime desc LIMIT 9   [ RunTime:0.0000s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 ORDER BY id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotWorkList D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 177 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-10-30T21:40:15+08:00 ] ::1 /vshow/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`works_name`,`works_image` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT vs_works.id,`works_author`,`click_counts`,`works_name` FROM `vs_works` INNER JOIN vs_works_counts as c on c.works_id = vs_works.id  WHERE `is_delete` = 0 ORDER BY click_counts desc LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`works_author`,`works_name` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 ORDER BY works_pubtime desc LIMIT 9   [ RunTime:0.0000s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 ORDER BY id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotWorkList D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 177 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:40:20+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: user D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\10d9d3a3ee686cd54ada4654f8b92792.php 第 113 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2015-10-30T21:40:22+08:00 ] ::1 /vshow/index.php/Home/User/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:40:22+08:00 ] ::1 /vshow/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`works_name`,`works_image` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 LIMIT 0,5   [ RunTime:0.0000s ]
+SQL: SELECT vs_works.id,`works_author`,`click_counts`,`works_name` FROM `vs_works` INNER JOIN vs_works_counts as c on c.works_id = vs_works.id  WHERE `is_delete` = 0 ORDER BY click_counts desc LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`works_author`,`works_name` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 ORDER BY works_pubtime desc LIMIT 9   [ RunTime:0.0010s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 ORDER BY id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotWorkList D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 177 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:40:23+08:00 ] ::1 /vshow/index.php/Home/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:40:34+08:00 ] ::1 /vshow/index.php/Home/User/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: auth D:\xampp\htdocs\vshow\ThinkPHP\Library\Think\Model.class.php 第 1264 行.
+SQL: SELECT `id`,`status`,`avater_path`,`truename` FROM `vs_user` WHERE `username` = 'student' AND `password` = 'cd73502828457d15655bbd7a63fb0bc8' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `vs_user` SET `last_login`='1446212434',`last_ip`='0.0.0.0' WHERE ( id=24 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `vs_auth_group_access` [ RunTime:0.0040s ]
+SQL: SELECT `group_id` FROM `vs_auth_group_access` WHERE `uid` = 24 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-10-30T21:40:34+08:00 ] ::1 /vshow/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`works_name`,`works_image` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT vs_works.id,`works_author`,`click_counts`,`works_name` FROM `vs_works` INNER JOIN vs_works_counts as c on c.works_id = vs_works.id  WHERE `is_delete` = 0 ORDER BY click_counts desc LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`works_author`,`works_name` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 ORDER BY works_pubtime desc LIMIT 9   [ RunTime:0.0010s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 ORDER BY id LIMIT 8   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotWorkList D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 177 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:40:37+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0050s ]
+SQL: SELECT `sign` FROM `vs_user` WHERE `id` = 24 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\10d9d3a3ee686cd54ada4654f8b92792.php 第 113 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-30T21:40:39+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: user D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\10d9d3a3ee686cd54ada4654f8b92792.php 第 113 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-30T21:40:40+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:40:45+08:00 ] ::1 /vshow/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`works_name`,`works_image` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 LIMIT 0,5   [ RunTime:0.0000s ]
+SQL: SELECT vs_works.id,`works_author`,`click_counts`,`works_name` FROM `vs_works` INNER JOIN vs_works_counts as c on c.works_id = vs_works.id  WHERE `is_delete` = 0 ORDER BY click_counts desc LIMIT 0,9   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`works_author`,`works_name` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 ORDER BY works_pubtime desc LIMIT 9   [ RunTime:0.0010s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 ORDER BY id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotWorkList D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 177 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-10-30T21:40:47+08:00 ] ::1 /vshow/index.php/Home/Index/workList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `vs_works` WHERE `is_delete` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 LIMIT 0,8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:40:48+08:00 ] ::1 /vshow/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`works_name`,`works_image` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT vs_works.id,`works_author`,`click_counts`,`works_name` FROM `vs_works` INNER JOIN vs_works_counts as c on c.works_id = vs_works.id  WHERE `is_delete` = 0 ORDER BY click_counts desc LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`works_author`,`works_name` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 ORDER BY works_pubtime desc LIMIT 9   [ RunTime:0.0000s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 ORDER BY id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotWorkList D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 177 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:40:53+08:00 ] ::1 /vshow/index.php/Home/Index/workList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `vs_works` WHERE `is_delete` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 LIMIT 0,8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\1fa89764e47ce3582f345c1043242482.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:40:54+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: user D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\10d9d3a3ee686cd54ada4654f8b92792.php 第 113 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:40:56+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:41:18+08:00 ] ::1 /vshow/index.php/Home/Works/worksAddAction
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0500s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\xampp\htdocs\vshow\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\xampp\htdocs\vshow\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `vs_works` (`works_name`,`works_about`,`works_label`,`works_pubtime`,`works_path`,`works_image`,`user_id`,`works_author`) VALUES ('航空网站','航空网站','','1446212477','5633737da17c6','5633737da331e.png','24','student') [ RunTime:0.0010s ]
+ERR: 提示:20
+SQL: SHOW COLUMNS FROM `vs_works_counts` [ RunTime:0.0140s ]
+SQL: INSERT INTO `vs_works_counts` (`works_id`) VALUES ('20') [ RunTime:0.0000s ]
+
+[ 2015-10-30T21:41:20+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-30T21:41:21+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/homework
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`works_name`,`works_pubtime`,`works_image` FROM `vs_works` WHERE `user_id` = 24 AND `is_delete` = 0  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-30T21:41:23+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/course
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `vs_course_student` [ RunTime:0.0040s ]
+SQL: SELECT `course_id` FROM `vs_course_student` WHERE ( user_id=24 )  [ RunTime:0.0000s ]
+SQL: SELECT vs_course.id,`course_name`,`course_about`,`course_pv`,`course_image`,`teacher_name` FROM `vs_course` WHERE ( id  in (34,35,36,37,38) )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`course_name`,`course_about`,`course_pv`,`course_image`,`teacher_name` FROM `vs_course`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-30T21:41:24+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/homework
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`works_name`,`works_pubtime`,`works_image` FROM `vs_works` WHERE `user_id` = 24 AND `is_delete` = 0  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:41:35+08:00 ] ::1 /vshow/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`works_name`,`works_image` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT vs_works.id,`works_author`,`click_counts`,`works_name` FROM `vs_works` INNER JOIN vs_works_counts as c on c.works_id = vs_works.id  WHERE `is_delete` = 0 ORDER BY click_counts desc LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`works_author`,`works_name` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 ORDER BY works_pubtime desc LIMIT 9   [ RunTime:0.0000s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 ORDER BY id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: hotWorkList D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 177 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-30T21:41:38+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: user D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\10d9d3a3ee686cd54ada4654f8b92792.php 第 113 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2015-10-30T21:41:43+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2015-10-30T21:42:03+08:00 ] ::1 /vshow/index.php/Home/Works/worksAddAction
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0040s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\xampp\htdocs\vshow\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\xampp\htdocs\vshow\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `vs_works` (`works_name`,`works_about`,`works_label`,`works_pubtime`,`works_path`,`works_image`,`user_id`,`works_author`) VALUES ('公司网站','公司网站','','1446212522','563373aa53fc1','563373aa5534a.png','24','student') [ RunTime:0.0000s ]
+ERR: 提示:21
+SQL: SHOW COLUMNS FROM `vs_works_counts` [ RunTime:0.0050s ]
+SQL: INSERT INTO `vs_works_counts` (`works_id`) VALUES ('21') [ RunTime:0.0010s ]
+
+[ 2015-10-30T21:42:04+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:42:06+08:00 ] ::1 /vshow/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`works_name`,`works_image` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 LIMIT 0,5   [ RunTime:0.0000s ]
+SQL: SELECT vs_works.id,`works_author`,`click_counts`,`works_name` FROM `vs_works` INNER JOIN vs_works_counts as c on c.works_id = vs_works.id  WHERE `is_delete` = 0 ORDER BY click_counts desc LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`works_author`,`works_name` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 ORDER BY works_pubtime desc LIMIT 9   [ RunTime:0.0010s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 ORDER BY id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotWorkList D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 177 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:42:12+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\10d9d3a3ee686cd54ada4654f8b92792.php 第 113 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011000s ]
+
+[ 2015-10-30T21:42:13+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: user D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\10d9d3a3ee686cd54ada4654f8b92792.php 第 113 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:42:14+08:00 ] ::1 /vshow/index.php/Home/StudentCenter/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:42:16+08:00 ] ::1 /vshow/index.php/Home/User/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:42:17+08:00 ] ::1 /vshow/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`works_name`,`works_image` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 LIMIT 0,5   [ RunTime:0.0020s ]
+SQL: SELECT vs_works.id,`works_author`,`click_counts`,`works_name` FROM `vs_works` INNER JOIN vs_works_counts as c on c.works_id = vs_works.id  WHERE `is_delete` = 0 ORDER BY click_counts desc LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`works_author`,`works_name` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 ORDER BY works_pubtime desc LIMIT 9   [ RunTime:0.0010s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 ORDER BY id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: hotWorkList D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 177 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:42:17+08:00 ] ::1 /vshow/index.php/Home/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:42:24+08:00 ] ::1 /vshow/index.php/Home/User/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: auth D:\xampp\htdocs\vshow\ThinkPHP\Library\Think\Model.class.php 第 1264 行.
+SQL: SELECT `id`,`status`,`avater_path`,`truename` FROM `vs_user` WHERE `username` = 'teacher' AND `password` = '8d788385431273d11e8b43bb78f3aa41' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `vs_user` SET `last_login`='1446212544',`last_ip`='0.0.0.0' WHERE ( id=25 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `vs_auth_group_access` [ RunTime:0.0040s ]
+SQL: SELECT `group_id` FROM `vs_auth_group_access` WHERE `uid` = 25 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-10-30T21:42:24+08:00 ] ::1 /vshow/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`works_name`,`works_image` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 LIMIT 0,5   [ RunTime:0.0000s ]
+SQL: SELECT vs_works.id,`works_author`,`click_counts`,`works_name` FROM `vs_works` INNER JOIN vs_works_counts as c on c.works_id = vs_works.id  WHERE `is_delete` = 0 ORDER BY click_counts desc LIMIT 0,9   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`works_author`,`works_name` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 ORDER BY works_pubtime desc LIMIT 9   [ RunTime:0.0000s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 ORDER BY id LIMIT 8   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotWorkList D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 177 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-30T21:42:27+08:00 ] ::1 /vshow/index.php/Home/TeacherCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`truename`,`sign` FROM `vs_user` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`course_name`,`course_about`,`course_pv`,`course_image`,`teacher_name` FROM `vs_course` WHERE ( teacher_id = 25 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

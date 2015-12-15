@@ -1,0 +1,37 @@
+<div id="header">
+	<div class="header-inner">
+		<h1 class="logo"><a href="__CONTROLLER__/t_Index/courseId/{$Think.get.courseId}" title="Vshow唯秀">{$courseName}</a></h1>
+		<div class="login-box" id="login">
+				<empty name="Think.session.UID">
+				<a href="__ROOT__/index.php/Home/User/login" class="login">登陆</a>
+				<a href="__ROOT__/index.php/Home/User/userReg" class="registr">注册</a>
+				
+			<else />
+				<if condition="$Think.session.group_id eq 3 "> 
+					<a href="__ROOT__/index.php/Home/StudentCenter/index" class="login">个人中心</a>
+					<a href="__ROOT__/index.php/Home/User/logout" class="registr">退出登录</a>
+				<else />
+					<a href="__ROOT__/index.php/Home/TeacherCenter/index" class="login">个人中心</a>
+					<a href="__ROOT__/index.php/Home/User/logout" class="registr">退出登录</a>
+				</if>
+			</empty>
+		</div>
+		
+	</div>
+</div>	
+	<ul class="nav nav-tabs nav-justified">
+	   <li role="presentation" id="notice-li"><a href="__CONTROLLER__/s_Index/courseId/{$Think.get.courseId}">课程公告</a></li>
+	  <li role="presentation" id="resource-li"><a href="__CONTROLLER__/s_ShowResource/courseId/{$Think.get.courseId}">课程资源</a></li>
+	  <li role="presentation" id="interflow-li"><a href="__CONTROLLER__/s_ShowInterflow/courseId/{$Think.get.courseId}">互动交流</a></li>
+	  <li role="presentation" id="homeowork-li"><a href="__CONTROLLER__/s_ShowHomework/courseId/{$Think.get.courseId}">课程作业</a></li>
+	</ul>
+	<script type="text/javascript">
+		$(function(){
+			var active = "[active]";
+			console.log($("#"+active));
+			$('.nav-tabs li').attr('class','');
+			$("#"+active).addClass('active');
+			
+		})
+
+	</script>	

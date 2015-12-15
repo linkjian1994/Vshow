@@ -1,0 +1,55 @@
+body {background: url(../../images/Index/body-bg.gif) repeat; color: #353c44; font: 14px/1.4 "微软雅黑","宋体",sans-serif; }
+#container {}
+.main {width: 1024px; margin: 0px auto;}
+
+/* header */
+#header {height: 174px; width: 100%; background: #353c44; color: #FFFFFF; border-bottom: 5px solid #00AADD;}
+.header-inner {position: relative; width: 1024px; height: 174px; margin: 0 auto;}
+/* logo */
+.logo {padding: 30px 0 0 14px;}
+.logo a {display: block; width: 174px; height: 80px; background: url(../../images/Index/logo.png) no-repeat left top; text-indent: -9999px;}
+.login-box {position: absolute; top: 10px; right: 0;}
+.login-box a {color: #FFFFFF;}
+.login-box a {padding: 4px 10px; border: 2px solid #646464;  color: #C8C8C8; font-size: 12px;}
+
+/* search */
+.search-box {position: absolute; top: 66px; right: 8px; width: 216px; height: 34px; padding: 5px 7px; border-radius: 8px; background: #138bbd;}
+.search-box .text {float: left; width: 165px; height: 30px; height: 30px \9; line-height: 30px \9; padding: 2px 5px; border-radius: 8px; background: #FFFFFF; color: #B4B4B4; border: none; outline: none;}
+.search-box .submit {float: right; width: 40px; height: 34px; background: url(../../images/Index/submit.png) no-repeat 10px 6px; border: none; text-indent: -9999px; cursor: pointer;}
+.search-box .search-focus {color: #333333;}
+/* nav */
+.nav {position: absolute; left: 0px; bottom: 0px; width: 1024px; height: 44px; margin: 0 auto; background: #138BBD; list-style: none;}
+.nav li {position: relative; float:left; height: 44px; padding: 0 30px;}
+.nav strong {display: block; color: #FFFFFF; font-size: 16px; line-height: 1.25em; padding-top: 10px; }
+.nav span {position: relative; text-align: right; display: block; opacity: 0; filter:alpha(opacity=0);  top: -38px; font:400 10px/1.25 verdana,arial; color:#F6EDAF;}
+.fixedNav{position:fixed; top:0px; left: 0px; width: 100%; z-index:100000; box-shadow: 0px 3px 6px #333333;  } 
+.nav-inner {width: 1024px; margin: 0 auto;}
+/*footer*/
+#footer {height: 140px; padding: 20px 0;  background: #353c44; color: #FFFFFF; border-top: 5px solid #00AADD;}
+.footer-inner {width: 1024px; margin: 0 auto;}
+.friend-link {width: 360px; height: 140px; padding: 0px 20px 0px 70px; border-right: 1px solid #1E1E1E;}
+.friend-link h2 {height: 44px; line-height: 44px; font-size: 18px; }
+.friend-link a {display: block; float: left; width: 90px; height: 30px; line-height: 30px;  color: #FFFFFF; text-align: center;font-size: 12px; }
+.friend-link a:hover {color: #4EA8CE; text-decoration: underline; font-style: italic; font-weight: bold;}
+.footer-cont {width: 514px; height: 110px; padding: 15px 20px; border-left: 1px solid #505050;}
+.footer-cont p {line-height: 29px; background: url(../../images/Index/line_divider.png) repeat-x left bottom; font-size: 12px;}
+.footer-cont p {padding-left: 4px;}
+
+
+
+
+
+
+
+.input-style{
+    width: 450px;
+    height: 30px;
+    height: 30px \9;
+    line-height: 30px \9;
+    padding: 2px 5px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #B4B4B4;
+    border: 1px solid #C8C8C8;
+    outline: none;
+}

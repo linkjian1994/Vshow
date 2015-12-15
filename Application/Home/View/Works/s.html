@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vshow-秀出自我</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Vshow学生发布平台,提供学生的作品发布">
+    <meta name="keywords" content="Vshow,致力于发展为高校的学生作品发布平台">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Index/reset.css"> 
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Index/comment.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Index/index.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Plug/Validation-Engine/validationEngine.jquery.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/script/Plug/artDialog/css/ui-dialog.css">
+    <script type="text/javascript" src="__PUBLIC__/script/Index/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/StudentCenter/jquery.dropkick-min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine-zh_CN.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/dialog-min.js"></script>
+     <script type="text/javascript" src="__PUBLIC__/script/Index/easing.1.3.js" ></script>   
+    <script type="text/javascript" src="__PUBLIC__/script/Index/comm.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Index/jquery-color.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Works/showWorks.js"></script>
+</head>
+<body>
+   <include file="Public/head" />
+    <div id="container">
+        <div class="main">
+            <div class="works-info clearfix">
+                <div class="works-left fl">
+                    <div class="tit clearfix">
+                        <h2 class="fl">{$worksInfo.works_name}</h2>
+                        <a href="__CONTROLLER__/showWork/id/{$worksInfo.id}" class="btn-blue fr">查看作品</a>                        
+                    </div>
+                    <div class="img-wrap">
+                        <a href="#"><img src="__ROOT__/Uploads/Works/b_{$worksInfo.works_image}"></a>
+                    </div>
+                    <div class="info clearfix">
+                        <span>作品简介:</span>
+                        <p>{$worksInfo.works_about}</p>
+                    </div>
+                    <div class="teach clearfix">
+                        <span>教师点评:</span>
+                        <p>{$worksInfo.comment}</p>
+                    </div>
+                </div>
+                <div class="works-right fr">
+                    <div class="uinfo clearfix">
+                        <div class="img-wrap fl">
+                            <img src="__ROOT__/Uploads/Avater/{$userInfo.avater_path}">
+                        </div>
+                        <div class="uinfo-cont fl">
+                            <span>{$userInfo.truename}</span>
+                            <p>{$userInfo.sign}</p>
+                        </div>
+                    </div>
+
+                    <div class="proinfo">
+                        <div class="tit">作品信息</div>
+                        <ul class="proinfo-cont">
+                            <li><span>作品名称:</span><em>{$worksInfo.works_name}</em></li>
+                            <li><span>作者姓名:</span><em>{$userInfo.truename}</em></li>
+                            <li><span>教师评分:</span><em>{$worksInfo.score}</em></li>
+                            <li><span>发布时间:</span><em>{$worksInfo.works_pubtime|date="Y-m-d",###}</em></li>
+                            <li><span>点击数:</span><em>{$countsInfo.click_counts}</em></li>
+                            <li><span>作品下载:</span><em class="btn-green"><a href="#">点击下载</a></em></li>              
+                        </ul>
+                    </div>
+
+                    <ul class="other clearfix">
+                        <li>
+                            <a href="javascript:;" class="operation" oid="1">
+                                <span>赞</span>
+                                <em>{$countsInfo.praise_counts}</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="operation" oid="2">
+                                <span>收藏</span>
+                                <em>{$countsInfo.collect_counts}</em>
+                            </a>                            
+                        </li>
+                        <li style="margin-right: 0;">
+                            <a href="javascript:;">
+                                <span>评论</span>
+                                <em>{$countsInfo.comment_counts}</em>
+                            </a>                            
+                        </li>
+                    </ul>
+                    <div class="link">
+                        <div class="bdsharebuttonbox" id="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div> <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                    </div>
+                </div>
+            <!-- 多说评论框 start -->
+    <div class="ds-thread works-left" data-thread-key="{$worksInfo.id}" data-title="" data-url="__SELF__" style="float: left;
+margin-top: 20px;"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"nvshow"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
+
+            </div>
+        </div>
+    </div>  
+
+    <include file="Public/footer"/>
+    <script type="text/javascript">
+    $(function(){
+      $('.operation').click(function(){
+          var $aObj = $(this); 
+          var wid   = "{$worksInfo.id}";
+          var oid   = $(this).attr('oid');
+
+          $.post('__ROOT__/index.php/Home/Works/doCounts',{wid : wid, oid : oid},
+                function(data,status){
+                    // console.log(data);
+                    if (data.status == '0') {
+                        D('你还没登陆哦<img src="__PUBLIC__/images/Common/doge_thumb.gif">').showModal();
+                    }else{
+                        $aObj.find('em').html(data.message);
+                        // console.log($(this));
+                    }
+             });
+        });
+
+        function D(content,direction){
+            var d = dialog({
+                align : direction,
+                content : content,
+            })
+
+            setTimeout(function () {
+                d.close();
+            }, 1900);
+
+            return d;
+         }
+    })
+    </script>
+</body>

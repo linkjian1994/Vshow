@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>{$user.truename}个人中心</title>
+    <!-- <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Common/reset.css"> -->
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body> 
+   <table class="table table-condensed">
+        <tr>
+            <th>作业名称</th>
+            <th>作业要求</th>
+            <th>发布时间</th>
+            <th>截止时间</th>
+            <th>作业状态</th>
+        </tr>
+        <volist name="homeworkList" id="co">
+            <tr>
+                <td>{$co.homework_name}</td>
+                <td>{$co.homework_about}</td> 
+                <td>{$co.pub_time|date="Y-m-d",###}</td>
+                <td>{$co.homework_expires|date="Y-m-d",###}</td>
+                <td>
+                <if condition="$co.is_expires eq 1">
+                        <button   class="btn btn-danger">已截止</button></td>
+                <else />
+                     <if condition="$co.homework_id eq null">
+                         <a href="__ROOT__/index.php/Home/StudentCenter/submitUserHomework/hid/{$co.id}"><button  class="take-homework-button" class="btn btn-info">提交作业</button></td></a>
+                        <else />
+                       <button class="btn btn-success">已提交</button></td>
+                    </if>
+                </if>
+            </tr>
+        </volist>
+    </table>
+<script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/sea.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/Common/jquery-1.10.2.js"></script>
+
+<script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/dialog-min.js"></script>
+
+</body>
+</html>

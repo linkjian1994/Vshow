@@ -1,0 +1,35 @@
+[ 2015-11-09T21:40:31+08:00 ] ::1 /vshow/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.020001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.030002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.030002s ]
+SQL: SHOW COLUMNS FROM `vs_works` [ RunTime:0.0910s ]
+SQL: SELECT `id`,`works_name`,`works_image` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 LIMIT 0,5   [ RunTime:0.0380s ]
+SQL: SELECT vs_works.id,`works_author`,`click_counts`,`works_name` FROM `vs_works` INNER JOIN vs_works_counts as c on c.works_id = vs_works.id  WHERE `is_delete` = 0 ORDER BY click_counts desc LIMIT 0,9   [ RunTime:0.0570s ]
+SQL: SELECT `id`,`works_author`,`works_name` FROM `vs_works` WHERE `is_delete` = 0 AND `is_rec` = 0 ORDER BY works_pubtime desc LIMIT 9   [ RunTime:0.0010s ]
+SQL: SELECT w.id,`works_name`,`works_author`,`works_pubtime`,`works_image`,`avater_path`,`praise_counts`,`collect_counts`,`comment_counts`,`click_counts` FROM vs_works w INNER JOIN vs_works_counts as c on w.id = c.works_id INNER JOIN vs_user as u on u.id =w.user_id   WHERE `is_delete` = 0 ORDER BY id LIMIT 8   [ RunTime:0.0520s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotWorkList D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 177 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+NOTIC: [8] Undefined index: works D:\xampp\htdocs\vshow\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 205 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.166009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.166009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015001s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.022001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.038002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

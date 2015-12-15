@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>{$user.truename}个人中心</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Common/reset.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Plug/Validation-Engine/validationEngine.jquery.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/script/Plug/artDialog/css/ui-dialog.css">
+</head>
+<body>
+    <table>
+        <volist name="courseList" id="co">
+            <tr>
+                <td>课程名称：</td>
+                <td>{$co.course_name}</td>
+            </tr> 
+            <tr>
+                <td>课程简介：</td>
+                <td>{$co.course_about}</td>
+            </tr> 
+            <tr>
+                <td>任课老师：</td>
+                <td>{$co.teacher_name}</td>
+            </tr> 
+            <tr>
+                <td>课程LOGO：</td>
+                <td><img src="__ROOT__/Uploads/Course/{$co.course_image}" alt="" /></td>
+            </tr>
+            <tr>
+                <td>参加课程</td>
+                <td><button  class="take-course-button" course-id="{$co.id}">参加课程</button></td>
+            </tr>
+        </volist>
+    </table>
+    
+
+	
+
+<script type="text/javascript" src="__PUBLIC__/script/Common/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine-zh_CN.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/StudentCenter/takeCourse.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/dialog-min.js"></script>
+</body>
+</html>

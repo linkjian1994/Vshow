@@ -1,0 +1,38 @@
+#footer {height: 140px; padding: 20px 0;  background: #353c44; color: #FFFFFF; border-top: 5px solid #00AADD;}
+.footer-inner {width: 1024px; margin: 0 auto;-webkit-box-sizing:content-box;box-sizing:content-box;}
+.friend-link {width: 360px; height: 140px; padding: 0px 20px 0px 70px; border-right: 1px solid #1E1E1E;-webkit-box-sizing:content-box;box-sizing:content-box;}
+.friend-link h2 {height: 44px; line-height: 44px; font-size: 18px; }
+.friend-link a {display: block; float: left; width: 90px; height: 30px; line-height: 30px;  color: #FFFFFF; text-align: center;font-size: 12px; }
+.friend-link a:hover {color: #4EA8CE; text-decoration: underline; font-style: italic; font-weight: bold;}
+.footer-cont {width: 514px; height: 110px; padding: 15px 20px; border-left: 1px solid #505050;-webkit-box-sizing:content-box;box-sizing:content-box;}
+.footer-cont p {line-height: 29px; background: url(../../images/Index/line_divider.png) repeat-x left bottom; font-size: 12px;}
+.footer-cont p {padding-left: 4px;}
+
+.fl{float: left;}
+
+/* header */
+#header {height: 144px; width: 100%; background: #353c44; color: #FFFFFF; border-bottom: 5px solid #00AADD;float: left;}
+.header-inner {position: relative; width: 1024px; height: 174px; margin: 0 auto;}
+/* logo */
+.logo {padding: 30px 0 0 14px;}
+.logo a {display: block; height: 80px;  }
+.login-box {position: absolute; top: 10px; right: 0;}
+.login-box a {color: #FFFFFF;}
+.login-box a {padding: 4px 10px; border: 2px solid #646464;  color: #C8C8C8; font-size: 12px;}
+
+.tableList{width: 1090px;margin:0 auto;margin-bottom: 30px;}
+.main {width: 1090px; margin: 30px auto;}
+.pub-area{width: 100%;margin-bottom:20px;float: left;}
+.pub-area a{float: right;}
+#homework_about{width: 200px;}
+#homework_add{margin-left: 35px;}
+#homework_add .input-group {margin-top: 10px;}
+#homework_add .input-group input{width: 200px;}
+.btn-home{margin-top: 20px;margin-left: 100px;margin-bottom: 20px;}
+
+
+.form-control{
+	.-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box; 
+}

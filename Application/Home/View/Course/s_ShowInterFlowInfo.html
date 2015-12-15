@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>{$user.truename}个人中心</title>
+   <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Course/common.css">
+    
+    <link rel="stylesheet" href="__PUBLIC__/script/Plug/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Plug/Validation-Engine/validationEngine.jquery.css">
+    <link rel="stylesheet" href="__PUBLIC__/script/Plug/bootstrap/css/bootstrap-theme.min.css">
+    <script type="text/javascript">var root = "__APP__";</script>
+    <script src="__PUBLIC__/script/Common/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine-zh_CN.js"></script>
+    <script src="__PUBLIC__/script/Plug/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/sea.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/dialog-min.js"></script>
+</head>
+<body> 
+ <include file="Course:t_head" active="interflow-li"/>
+
+    <div style="margin-bottom:280px">
+      <br/>
+
+      <br/>
+      
+        <center><h2>{$interFlowInfo.title}</h2></center>
+      <br/>
+      <!-- <br/> -->
+      <!-- <br/> -->
+        <center><h4>提问人{$interFlowInfo.user_name} 提问时间：{$interFlowInfo.pub_time|date="Y-m-d",###}</h4></center>
+      <br/>
+
+        <center><h5>{$interFlowInfo.content}</h5></center>
+    </div>
+    
+    
+    <!-- <include file="Public:footer" /> -->
+</body>
+</html>

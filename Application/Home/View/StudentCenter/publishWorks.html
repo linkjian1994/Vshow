@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>{$user.truename}个人中心</title>
+    <!-- <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Common/reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Plug/Validation-Engine/validationEngine.jquery.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/script/Plug/artDialog/css/ui-dialog.css">
+</head>
+<body> 
+    <div style="margin-top:100px;"></div>
+    <form id="worksUpload">
+        作品名称：<input type="text" name="works-name"  id="works-name"  class="validate[required,maxSize[24]]"/><br/>
+        作品简介：<input type="text" name="works-about" id="works-about" class="validate[maxSize[200]]" /><br/>
+        <!-- 选择作业 <input type="radio" name="is-homework" value="0" checked="checked" />个人作品
+                 <input type="radio" name="is-homework" value="1" />课程作业<br/> -->
+        作品标签：<input type="text" name="works-label"  id="works-label"  /><br/>
+        作品文件：<input type="file" name="works-file" id="works-file" class="validate[required]"/><br/>
+        作品截图：<input type="file" name="works-images" id="works-images" class="validate[required]"/><br/>
+        <input type="submit" value="发布作品">
+    </form>
+    
+<script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/sea.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/Common/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine-zh_CN.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/StudentCenter/publishWorks.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/dialog-min.js"></script>
+</body>
+</html>

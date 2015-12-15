@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>{$user.truename}-个人中心</title>
+	<!-- <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Common/reset.css"> -->
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Plug/Validation-Engine/validationEngine.jquery.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/script/Plug/artDialog/css/ui-dialog.css">
+	<link rel="stylesheet" href="__PUBLIC__/script/Plug/jcrop/css/jquery.Jcrop.css">
+</head>
+<body>
+
+	个人信息:
+
+	姓名：<input type="text" name="truename"/ value="{$user.truename}"> 
+	性别：<input type="text" name="sex" value="">
+	电子邮箱：<input type="text" name="truename"/ value="{$user.email}" disabled="none" alt="电子邮箱已验证，无法修改">
+	<p></p>
+	<form id="modify_pwd">
+		<input type="password" name="pwd" id="password" class="validate[required,minSize[6],maxSize[15],custom[onlyLetterNumber]]"> 
+		<input type="password" name="newpwd" id="new_password" class="validate[required,minSize[6],maxSize[15],funcCall[checkNewPwd]">
+		<input type="password" name="rqpwd" id="rq_passwd" class="validate[required,equals[new_password]]">
+		<input type="submit" value="更改密码" >
+	</form>
+	
+	<form id="avater_form">
+		<img src="" alt="" id="avater_image" />
+		<input type="file" name="avater" id="avater">
+	</form>
+
+	<form id="modify_avater">
+		<input type="hidden" id="w" name="w">
+		<input type="hidden" id="h" name="h">
+		<input type="hidden" id="x" name="x">
+		<input type="hidden" id="y" name="y">
+		<input type="submit" value="头像上传">
+	</form>
+
+
+
+	<script type="text/javascript" src="__PUBLIC__/script/Common/jquery-1.10.2.js"></script>
+	<script type="text/javascript">
+		$(document).on('submit','#modify_avater',function(){
+			return false;
+		});
+	</script>
+	<script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/script/Plug/Validation-Engine/jquery.validationEngine-zh_CN.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/script/Plug/artDialog/dist/dialog-min.js"></script>
+	<script src="__PUBLIC__/script/Plug/jcrop/js/jquery.Jcrop.js"></script> 
+	<script type="text/javascript" src="__PUBLIC__/script/StudentCenter/index.js"></script>
+</body>
+</html>

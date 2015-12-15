@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vshow-秀出自我</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Vshow学生发布平台,提供学生的作品发布">
+    <meta name="keywords" content="Vshow,致力于发展为高校的学生作品发布平台">
+
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Index/reset.css"> 
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Index/comment.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Index/index.css">
+
+    <script type="text/javascript" src="__PUBLIC__/script/Index/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Index/jquery-color.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/script/Index/easing.1.3.js" ></script>
+    <script type="text/javascript">
+        var ROOT = "__ROOT__";
+        var APP =  "__APP__";
+    </script>   
+    <script type="text/javascript" src="__PUBLIC__/script/Index/comm.js"></script>
+
+</head>
+<body>
+    <include file="Public:head" active="project"/>
+    
+    
+    <div id="container">
+        <div class="main">
+            <div class="assort" id="assort">
+                <ul>
+                    <li class="type-sort">
+                        <strong>分类</strong>
+                        <dl>
+                            <dd><a href="#" id="type-all" class="active">全部作品</a></dd>
+                            <dd><a href="#" id="type-web">网页作品</a></dd>
+                        </dl>
+                    </li>
+                    <li class="hot-sort">
+                        <strong>排序</strong>
+                        <dl>
+                            <dd><a href="#" id="sort-new" class="active">最新</a></dd>
+                            <dd><a href="#" id="sort-hot">最热</a></dd>
+                            <dd><a href="#" id="sort-col">收藏</a></dd>
+                            <dd><a href="#" id="sort-prc">点赞</a></dd>
+                        </dl>
+                    </li>
+                   <!--  <li class="class-sort">
+                        <strong>班级</strong>
+                        <dl>
+                            <dd><a href="#">13网络1班</a></dd>
+                            <dd><a href="#">13网络2班</a></dd>
+                            <dd><a href="#">14网络1班</a></dd>
+                            <dd><a href="#">14网络2班</a></dd>
+                            <dd><a href="#">14网络3班</a></dd>
+                        </dl>
+                    </li> -->
+                    <!-- <li class="label-sort">
+                        <strong>标签</strong>
+                        <dl>
+                            <dd><a href="#">HTML5</a></dd>
+                            <dd><a href="#">CSS3</a></dd>
+                            <dd><a href="#">Javascript</a></dd>
+                            <dd><a href="#">php</a></dd>
+                            <dd><a href="#">jquery</a></dd>
+                            <dd><a href="#">bootstrap</a></dd>
+                        </dl>
+                    </li> -->
+                </ul>
+            </div>
+            <ul class="works-box clearfix" id="worksBox">
+            <!--     <li>
+                    <div class="img-box">
+                        <a href="#" title="设计师规划" class="zoom">
+                            <img src="__PUBLIC__/images/Index/img1.jpg" alt="">
+                        </a>                            
+                    </div>
+                    <div class="img-cont">
+                        <h4><a href="#" title="作品名称等等">作品名称等等</a></h4>
+                        <div class="head fl"><a href="#" title="作者名称"><img src="__PUBLIC__/images/Index/img1.jpg" alt="作者名称"></a></div>
+                        <div class="author fl"><a href="#">作者名字</a></div>
+                        <div class="time fr">2015-04-22</div>
+                        <div class="other">
+                            <dl class="clearfix">
+                                <dd class="view">100</dd>
+                                <dd class="love">20</dd>
+                                <dd class="star">10</dd>
+                                <dd class="weixin">300</dd>
+                            </dl>                               
+                        </div>
+                    </div>
+                </li> -->
+                <empty name="allWorkList">
+                    <div class="empty-message">
+                        很抱歉，未能查找到内容
+                    </div>
+                 </empty>
+                <volist name="allWorkList" id="vo">
+                    <li id="allwWorkList{$i}">
+                        <div class="img-box">
+                            <a  href="__APP__/Home/Works/s/id/{$vo.id}" title="{$vo.works.name}" class="zoom">
+                                <img src="__ROOT__/Uploads/Works/m_{$vo.works_image}" alt="">
+                            </a>                            
+                        </div>
+                        <div class="img-cont">
+                            <h4><a href="#" title="{$vo.works_name}">{$vo.works_name}</a></h4>
+                        
+                            <div class="head fl"><a href="#" title="{$vo.works_author}"><img src="__ROOT__/Uploads/Avater/{$vo.avater_path}" alt="{$vo.works_author}"></a></div>
+                            <div class="author fl"><a href="#">{$vo.works_author}</a></div>
+                            <div class="time fr">{$vo.works_pubtime|date="Y-m-d",###}</div>
+                            <div class="other">
+                                <dl class="clearfix">
+                                    <dd class="view">{$vo.click_counts}</dd>
+                                        <dd class="love">{$vo.praise_counts}</dd>
+                                        <dd class="star">0</dd>
+                                        <dd class="weixin">{$vo.comment_counts}</dd>
+                                </dl>                               
+                            </div>
+                        </div>
+                    </li>
+                    </volist>
+               
+            </ul>
+            <div class="page" id="page">
+               {$page}
+            </div>
+        </div>
+    </div>
+
+    <include file="Public/footer"/>
+</body>
+</html>
